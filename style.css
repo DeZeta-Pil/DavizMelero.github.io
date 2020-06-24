@@ -1,0 +1,106 @@
+h1, h2, p { margin:0; padding:0; font-weight:normal; font-style:normal; }
+
+.html,body{
+     /* Para que funcione correctamente en Smarthpones y Tablets */
+     height:100vh;
+}
+body {
+     /* Ruta relativa o completa a la imagen */
+     background-image: url(images/fondo_1024x576.jpg);
+     /* Centramos el fondo horizontal y verticalmente */
+     background-position: center center;
+     /* El fondo no se repite */
+     background-repeat: no-repeat;
+     /* Fijamos la imagen a la ventana para que no supere el alto de la ventana */
+     background-attachment: fixed;
+     /* Hacer una imagen para cada tipo de pantalla da problemas */
+     /* Usamos la propiedad cover para que una sola imagen se adapte a todas las pantallas */
+     background-size: cover;
+     /* Color de fondo si la imagen no se encuentra o mientras se está cargando */
+     background-color: #FFF;
+     /* Fuente para el texto */
+     color: #000;
+     font-family: 'Oswald', sans-serif; color:#FFFFFF;
+ }
+
+/* Definimos los tamaños de encabezados y párrafo */
+.textstyle_h1 { font-size:24pt; font-family: 'Oswald', sans-serif; color:#FFFFFF;  }
+.textstyle_h2 { font-size:18pt; font-family: 'Oswald', sans-serif; color:#FFFFFF;  }
+p { text-align: justify; 	}
+.textstyle_p {font-size:16pt; font-family: 'Oswald', sans-serif; color:#FFFFFF;}
+
+/* Alineación de iconos en tres columnas */
+
+.img3col .imgResponsive {
+    display: inline-block;
+    font-size: inherit;
+    padding: 10px;                  /* Valor de espaciado entre columnas */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.img3col .imgResponsive {width: 30%; }
+
+.imgResponsive img {
+    height: auto;
+    width: 100%;
+}
+
+
+
+/* Diseño responsive */
+
+/* Para la pantalla del smartphone*/
+
+@media screen and (max-width:1080px) and (min-width:640px)
+{
+body { background-color:#6A5481; padding:0;  margin: 0; }
+.textstyle1 { text-align:center; }
+
+/* Contenedor de texto e iconos */
+.container {
+font-size: 2em;
+position: absolute;
+transform: translate(30%, 20%); /* Reposiciona X,Y */
+margin: 0 auto;
+width: 100%;
+max-width: 70%;
+text-align:center;
+background-color:rgba(81, 164, 82, 0.8);
+box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.6);
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 35px 35px 35px; 
+border: 4px solid #FF00ff;
+}
+
+ }
+
+/* Para la pantalla del PC */
+
+@media screen and (min-width:1080px)
+{
+body { background-color:#6A5481; padding:0;  margin: 0; }
+.textstyle1 { text-align:center; }
+
+/* Contenedor de texto e iconos */
+.container {
+font-size: 1.5em;
+position: relative;
+transform: translate(150%, 10%); /* Reposicionar X,Y */
+margin: 0 auto;
+width: 100%;
+max-width: 30%;
+text-align:center;
+background-color:rgba(128, 128, 192, 0.6);
+box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.6);
+margin: 0 0 25px; 
+overflow: hidden; 
+padding: 20px; 
+border-radius: 35px 35px 35px 35px; 
+border: 2px solid #5878ca;
+}
+
+
+ }
